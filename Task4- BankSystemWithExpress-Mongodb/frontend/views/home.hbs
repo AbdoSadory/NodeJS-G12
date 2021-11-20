@@ -1,0 +1,21 @@
+{{>header}}
+{{>navbar}}
+<div class="container">
+    <form class="application " method="POST" id="application">
+        <div class="conatiner my-3 text-center">
+            <input type="text" name="clientName" id="clientName" placeholder="Full Name">
+        </div>
+        <div class="conatiner my-3 text-center">
+            <input type="text" name="clientCity" id="clientCity" placeholder="City">
+            <input type="text" name="clientStreet" id="clientStreet" placeholder="Street">
+            <input type="text" name="clientBuilding" id="clientBuilding" placeholder="Building">
+        </div>
+        <div class="conatiner my-3 text-center">
+            <input type="number" name="clientBalance"  class="clientBalance" placeholder="Balance">
+        </div>
+        <div class="conatiner my-3 text-center ">
+            <input type="submit" class="submit btn btn-success" id="submit">
+        </div>
+    </form>
+</div>
+{{>footer}}

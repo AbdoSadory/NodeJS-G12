@@ -1,0 +1,32 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <div class="border border-primary p-5 m-3">
+        <h3>Client ID: {{client._id}}</h3>
+        <h3>Client Name: {{client.clientName}}</h3>
+        <div class="m-0 p-0 ps-3">
+            <p>Client City: {{client.clientCity}}</p>
+            <p>Client Street: {{client.clientStreet}}</p>
+            <p>Client Building: {{client.clientBuilding}}</p>
+        </div>
+        <div class="m-0 p-0 ps-3">
+            <table class="table table-bordered  text-center m-0 clientTable" id="clientTable">
+            <thead>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>New Balance</th>
+            </thead>
+            <tbody class="clientTableBody">
+                {{#each client.transactions}}
+                <tr>
+                    <td>{{this.type}}</td>
+                    <td>{{this.amount}}</td>
+                    <td>{{this.newBalance}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+{{>footer}}

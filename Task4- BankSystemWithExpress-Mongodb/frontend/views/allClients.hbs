@@ -1,0 +1,29 @@
+{{>header}}
+{{>navbar}}
+<section class="container my-3">
+    <table class="table table-bordered clientsTable" id="clientsTable">
+        <thead>
+            <th>Account Number</th>
+            <th>Name</th>
+            <th>Current Balance</th>
+            <th>Actions</th>
+        </thead>
+        <tbody class="body1">
+            {{#each allClients}}
+            <tr>
+                <td>{{this._id}}</td>
+                <td>{{this.clientName}}</td>
+                <td>{{this.clientBalance}}</td>
+                <td>
+                    <a href="/user/singleuser/show/{{this._id}}" class="btn btn-warning mx-2">Show</a>
+                    <a href="/user/transaction/withdraw/{{this._id}}" class="btn btn-primary mx-2">Withdraw</a>
+                    <a href="/user/transaction/addBalance/{{this._id}}" class="btn btn-danger mx-2">Add Balance</a>
+                    <a href="/user/delete/{{this._id}}" class="btn btn-danger mx-2">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    
+</section>
+{{>footer}}
